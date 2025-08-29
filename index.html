@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geological Time Scale Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <h1 class="header__title">Geological Time Scale Explorer</h1>
+                <p class="header__subtitle">Discover the timeline of Earth's history</p>
+<p2 class="header__subtitle">Powered by Inarch Center</p2>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <div class="container">
+                <!-- Search Section -->
+                <section class="search-section">
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input type="text" id="searchInput" class="search-input" placeholder="Search geological periods, epochs, ages... (e.g., Calabrian Age)" autocomplete="off">
+                            <button id="searchBtn" class="search-btn btn btn--primary">
+                                <span class="search-icon">🔍</span>
+                                Search
+                            </button>
+                        </div>
+                        <div id="suggestions" class="suggestions hidden"></div>
+                    </div>
+                    
+                    <div class="search-actions">
+                        <button id="randomFactBtn" class="btn btn--outline">🎲 Random Fact</button>
+                        <button id="timelineBtn" class="btn btn--outline">📊 Timeline View</button>
+                        <button id="compareBtn" class="btn btn--outline">⚖️ Compare Periods</button>
+                    </div>
+                </section>
+
+                <!-- Results Section -->
+                <section id="resultsSection" class="results-section hidden">
+                    <div id="searchResults" class="search-results"></div>
+                </section>
+
+                <!-- Categories Section -->
+                <section class="categories-section">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" data-category="all">All</button>
+                        <button class="tab-btn" data-category="eon">Eons</button>
+                        <button class="tab-btn" data-category="era">Eras</button>
+                        <button class="tab-btn" data-category="period">Periods</button>
+                        <button class="tab-btn" data-category="epoch">Epochs</button>
+                        <button class="tab-btn" data-category="age">Ages</button>
+                    </div>
+
+                    <div id="categoryContent" class="category-content">
+                        <div class="category-grid" id="categoryGrid"></div>
+                    </div>
+                </section>
+
+                <!-- Timeline Section -->
+                <section id="timelineSection" class="timeline-section hidden">
+                    <h2>Interactive Timeline</h2>
+                    <div class="timeline-note">
+                        <p><strong>Note:</strong> Ma = Million years ago. Timeline uses logarithmic scale due to vast time differences.</p>
+                    </div>
+                    <div id="timelineContainer" class="timeline-container">
+                        <div class="timeline-track" id="timelineTrack"></div>
+                    </div>
+                </section>
+
+                <!-- Compare Section -->
+                <section id="compareSection" class="compare-section hidden">
+                    <h2>Compare Time Periods</h2>
+                    <div class="compare-container">
+                        <div class="compare-input">
+                            <label class="form-label">First Period:</label>
+                            <select id="compareSelect1" class="form-control">
+                                <option value="">Select a period...</option>
+                            </select>
+                        </div>
+                        <div class="compare-input">
+                            <label class="form-label">Second Period:</label>
+                            <select id="compareSelect2" class="form-control">
+                                <option value="">Select a period...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="compareResults" class="compare-results"></div>
+                </section>
+
+                <!-- Info Section -->
+                <section class="info-section">
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>About Geological Time</h3>
+                            <p>The geological time scale divides Earth's 4.6-billion-year history into hierarchical units based on rock formations and fossil evidence.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Time Units</h3>
+                            <ul class="time-units">
+                                <li><strong>Eons:</strong> Largest divisions (billions of years)</li>
+                                <li><strong>Eras:</strong> Major subdivisions (hundreds of millions)</li>
+                                <li><strong>Periods:</strong> Rock system divisions (tens of millions)</li>
+                                <li><strong>Epochs:</strong> Smaller subdivisions (millions)</li>
+                                <li><strong>Ages:</strong> Smallest formal units</li>
+                            </ul>
+                        </div>
+                        <div class="info-card">
+                            <h3>Abbreviations</h3>
+                            <ul>
+                                <li><strong>Ma:</strong> Million years ago</li>
+                                <li><strong>Ga:</strong> Billion years ago</li>
+                                <li><strong>Present:</strong> Modern day (0 Ma)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Geological Time Scale Explorer. Educational tool for students and researchers.</p>
+<p3>All rights reserved by Inarch Center.</p3>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
